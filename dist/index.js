@@ -1,10 +1,9 @@
-
-function hamburger (){
-    var ham = document.getElementById("menu");
-    if(ham.style.display===block){
-        ham.style.display="hidden";
+document.getElementById('hamburger').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('bg-slate-500');
+    } else {
+        menu.classList.add('hidden');
     }
-    else{
-        ham.style.display="block";
-    }
-}
+});
